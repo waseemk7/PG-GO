@@ -18,8 +18,8 @@ export default function Home() {
               <p className={styles.subtitle}>
                 100% Refund On Cancellation. Zero Brokerage. No Hidden Charges.
               </p>
-              <FormComponent />
             </div>
+            <FormComponent />
           </div>
           <div className={styles.rightSection}>
             <Image
