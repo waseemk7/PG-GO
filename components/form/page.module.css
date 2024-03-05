@@ -1,0 +1,68 @@
+/* styles/FormComponent.module.css */
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start of the column */
+  background-color: #ffffff; /* White background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+}
+
+.formRow {
+  display: flex;
+  justify-content: space-between; /* Space between label and input */
+  align-items: center;
+  width: 100%; /* Ensure rows take up full width */
+  margin-bottom: 20px; /* Spacing between form rows */
+}
+
+.label {
+  font-size: 18px; /* Increase font size */
+  color: #000000; /* Black text color */
+  margin-right: 10px; /* Spacing between label and input */
+  flex: 1; /* Allow labels to expand to equal width */
+}
+
+.dropdown {
+  width: 50%; /* Input fields span half the width of the container */
+  max-width: 200px; /* Limit the maximum width of input fields */
+  height: 40px; /* Adjust height as needed */
+  font-size: 16px; /* Increase font size */
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text color */
+  border: 1px solid #000000; /* Black border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 5px 10px; /* Padding inside input */
+  appearance: none; /* Remove default styling */
+}
+
+.dropdown:focus {
+  outline: none; /* Remove focus outline */
+  border-color: #007bff; /* Blue border color when focused */
+}
+
+@media only screen and (min-width: 768px) {
+  .formContainer {
+    flex-direction: row;
+    align-items: center; /* Align items to the center of the row */
+  }
+
+  .formRow {
+    margin-bottom: 0; /* Reset margin for larger screens */
+    margin-right: 20px; /* Spacing between form rows */
+  }
+
+  .dropdown {
+    width: 200px; /* Set width for input fields on larger screens */
+  }
+}
+
+.searchIcon {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"%3E%3Cpath fill="%23000" d="M23.794 22.307l-6.375-6.375c1.44-1.857 2.305-4.141 2.305-6.629C19.724 4.397 15.327 0 9.862 0 4.396 0 0 4.397 0 9.862s4.397 9.862 9.862 9.862c2.488 0 4.772-.865 6.629-2.305l6.375 6.375c.391.392 1.023.392 1.414 0 .391-.39.391-1.023 0-1.414zM9.862 16.765c-4.151 0-7.5-3.35-7.5-7.5s3.349-7.5 7.5-7.5c4.151 0 7.5 3.35 7.5 7.5s-3.349 7.5-7.5 7.5z"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: right 10px center;
+  padding-right: 30px; /* Adjust padding to accommodate the icon */
+}
