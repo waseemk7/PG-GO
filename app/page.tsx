@@ -1,11 +1,14 @@
 import Header from "@/components/header/page";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <main>
-      <div>
+    <main className={styles.main}>
+      <div className={styles.contentWrapper}>
         <Header title={"PGGO"} />
-        <p>Get started by editing</p>
+        <p className={styles.description}>
+          Welcome back! Let’s continue your search
+        </p>
       </div>
     </main>
   );
