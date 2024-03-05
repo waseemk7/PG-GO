@@ -1,1 +1,28 @@
-node_modules
+# Ignore Node.js generated files
+node_modules/
+
+# Ignore build output
+/.next/
+/out/
+
+# Ignore environment variables file
+.env
+
+# Ignore yarn lock file
+yarn.lock
+
+# Ignore IDE and editor files
+.idea/
+.vscode/
+
+# Ignore TypeScript build output
+*.tsbuildinfo
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore pack.gz files
+*.pack.gz
+
+# Ignore manifest files
+*.manifest
