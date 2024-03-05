@@ -21,8 +21,14 @@ yarn.lock
 # Ignore macOS system files
 .DS_Store
 
-# Ignore pack.gz files
+# Ignore .pack.gz files
 *.pack.gz
 
 # Ignore manifest files
 *.manifest
+
+# Ignore webpack build output
+/build/
+
+# Ignore static runtime files
+/static/
