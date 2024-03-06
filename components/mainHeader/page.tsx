@@ -27,7 +27,7 @@ const MainHeader: React.FC<HeaderProps> = () => {
       <nav className={styles.navbar}>
         <ul>
           <li>
-            <Link href="/login">List your property</Link>
+            <Link href="/listYourProperty">List your property</Link>
           </li>
           <li>
             <Link href="/login">Login</Link>
