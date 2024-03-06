@@ -1,4 +1,3 @@
-import Header from "@/components/header/page";
 import FormComponent from "@/components/form/page";
 import Image from "next/image";
 import styles from "./page.module.css";
@@ -8,7 +7,6 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.contentWrapper}>
-        <Header title={"PGGO"} />
         <div className={styles.container}>
           <div className={styles.leftSection}>
             <div className={styles.content}>
