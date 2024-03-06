@@ -1,3 +1,5 @@
+/* page.module.css */
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -9,8 +11,35 @@
 
 .header h1 {
   margin: 0;
+  font-size: 1.5rem; /* Adjust font size as needed */
 }
 
-.pggoLogo {
-  /* If you need to style the logo */
+.navbar {
+  display: flex;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin-right: 1rem; /* Adjust spacing between list items */
+}
+
+.navbar li:last-child {
+  margin-right: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem; /* Adjust font size as needed */
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ccc; /* Change color on hover */
 }

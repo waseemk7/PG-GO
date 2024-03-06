@@ -1,3 +1,5 @@
+// MainHeader.tsx
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,17 +10,30 @@ interface HeaderProps {}
 const MainHeader: React.FC<HeaderProps> = () => {
   return (
     <header className={styles.header}>
-      {/* <Image
-        src="/vercel.svg"
-        alt="PGGO Logo"
-        className={styles.pggoLogo}
-        width={100}
-        height={24}
-        priority
-      /> */}
-      <h1>PG GO</h1>
+      <Link href="/">
+        <div className={styles.logoContainer}>
+          {/* <Image
+            src="/vercel.svg"
+            alt="PGGO Logo"
+            className={styles.pggoLogo}
+            width={100}
+            height={24}
+            priority
+          /> */}
+          <h1>PgGo.com</h1>
+        </div>
+      </Link>
 
-      <Link href="/login">Login</Link>
+      <nav className={styles.navbar}>
+        <ul>
+          <li>
+            <Link href="/login">List your property</Link>
+          </li>
+          <li>
+            <Link href="/login">Login</Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 };
