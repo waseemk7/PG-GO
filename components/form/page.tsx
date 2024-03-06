@@ -1,19 +1,17 @@
-// components/FormComponent.tsx
-
 import React from "react";
 import styles from "./page.module.css";
 
 const FormComponent: React.FC = () => {
   const cities = [
+    "Pune",
     "Mumbai",
     "Delhi",
     "Bangalore",
     "Kolkata",
     "Chennai",
     "Hyderabad",
-    "Pune",
     "Ahmedabad",
-  ]; // Add more cities as needed
+  ];
 
   return (
     <div className={styles.formContainer}>
