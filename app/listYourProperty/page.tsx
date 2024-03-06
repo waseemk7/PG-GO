@@ -109,8 +109,8 @@ const Listing: React.FC = () => {
       {/* Render uploaded properties below the form */}
       {properties.map((property, index) => (
         <div key={index} className={styles.container}>
-          <h2>{property.title}</h2>
-          <p className={styles.propertyText}>{property.description}</p>
+          <h2 className={styles.propertyTitle}>{property.title}</h2>
+          <p className={styles.propertyText}>Description: {property.description}</p>
           <p className={styles.propertyText}>Location: {property.location}</p>
           <p className={styles.propertyText}>Rent: {property.rent}</p>
           {/* Render other property details */}

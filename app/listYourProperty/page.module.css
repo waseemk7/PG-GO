@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  flex-direction: column;
+  flex-direction: column; /* Change to column */
 }
 
 .container {
@@ -47,6 +47,11 @@
 
 .propertyText {
   color: black;
+}
+
+.propertyTitle {
+  color: black;
+  margin-top: 0;
 }
 
 .image {
