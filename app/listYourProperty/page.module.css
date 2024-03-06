@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  flex-direction: column;
 }
 
 .container {
@@ -44,17 +45,11 @@
   background-color: #0056b3;
 }
 
-.propertyContainer {
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 5px;
+.propertyText {
+  color: black;
 }
 
-.propertyContainer h2 {
-  margin-top: 0;
-}
-
-.propertyContainer img {
+.image {
   max-width: 100%;
   height: auto;
   margin-top: 10px;

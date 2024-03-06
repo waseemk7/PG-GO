@@ -104,23 +104,28 @@ const Listing: React.FC = () => {
             Submit
           </button>
         </form>
+      </div>
 
-        {/* Render uploaded properties below the form */}
-        {properties.map((property, index) => (
-          <div key={index} className={styles.propertyContainer}>
-            <h2>{property.title}</h2>
-            <p>{property.description}</p>
-            {/* Render other property details */}
+      {/* Render uploaded properties below the form */}
+      {properties.map((property, index) => (
+        <div key={index} className={styles.container}>
+          <h2>{property.title}</h2>
+          <p className={styles.propertyText}>{property.description}</p>
+          <p className={styles.propertyText}>Location: {property.location}</p>
+          <p className={styles.propertyText}>Rent: {property.rent}</p>
+          {/* Render other property details */}
+          <div>
             {property.pictures.map((picture, picIndex) => (
               <img
                 key={picIndex}
                 src={URL.createObjectURL(picture)}
                 alt={`Property ${index} - Image ${picIndex}`}
+                className={styles.image}
               />
             ))}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };
