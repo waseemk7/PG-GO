@@ -22,7 +22,7 @@ type Property = {
 const dummyProperties: Property[] = [
   {
     id: 1,
-    image: "https://via.placeholder.com/300",
+    image: "https://cdn.pixabay.com/photo/2014/08/08/21/05/bar-413709_1280.jpg",
     title: "Beautiful Villa 1",
     description: "A luxurious villa with stunning views",
     contact: "agent1@example.com",
@@ -34,7 +34,8 @@ const dummyProperties: Property[] = [
   },
   {
     id: 2,
-    image: "https://via.placeholder.com/300",
+    image:
+      "https://cdn.pixabay.com/photo/2014/08/08/21/03/bedroom-413706_1280.jpg",
     title: "Luxurious Apartment",
     description: "A spacious apartment with modern amenities",
     contact: "agent2@example.com",
@@ -46,7 +47,8 @@ const dummyProperties: Property[] = [
   },
   {
     id: 3,
-    image: "https://via.placeholder.com/300",
+    image:
+      "https://cdn.pixabay.com/photo/2013/09/16/19/20/beds-182964_1280.jpg",
     title: "Cozy Cottage",
     description: "A cozy cottage nestled in the countryside",
     contact: "agent3@example.com",
@@ -58,7 +60,8 @@ const dummyProperties: Property[] = [
   },
   {
     id: 4,
-    image: "https://via.placeholder.com/300",
+    image:
+      "https://cdn.pixabay.com/photo/2013/09/16/19/21/beds-182965_1280.jpg",
     title: "Spacious Townhouse",
     description: "A spacious townhouse with a garden",
     contact: "agent4@example.com",
@@ -70,7 +73,7 @@ const dummyProperties: Property[] = [
   },
   {
     id: 5,
-    image: "https://via.placeholder.com/300",
+    image: "https://cdn.pixabay.com/photo/2013/06/30/19/07/bed-142516_1280.jpg",
     title: "Seaside Retreat",
     description: "A charming retreat by the sea",
     contact: "agent5@example.com",
@@ -82,7 +85,8 @@ const dummyProperties: Property[] = [
   },
   {
     id: 6,
-    image: "https://via.placeholder.com/300",
+    image:
+      "https://cdn.pixabay.com/photo/2018/06/14/21/15/bedroom-3475656_1280.jpg",
     title: "Rustic Cabin",
     description: "A rustic cabin surrounded by nature",
     contact: "agent6@example.com",
@@ -94,7 +98,8 @@ const dummyProperties: Property[] = [
   },
   {
     id: 7,
-    image: "https://via.placeholder.com/300",
+    image:
+      "https://cdn.pixabay.com/photo/2020/10/18/09/16/bedroom-5664221_1280.jpg",
     title: "Modern Loft",
     description: "A modern loft with city views",
     contact: "agent7@example.com",
@@ -106,7 +111,8 @@ const dummyProperties: Property[] = [
   },
   {
     id: 8,
-    image: "https://via.placeholder.com/300",
+    image:
+      "https://cdn.pixabay.com/photo/2017/01/14/12/48/hotel-1979406_1280.jpg",
     title: "Elegant Mansion",
     description: "An elegant mansion with a grand staircase",
     contact: "agent8@example.com",
@@ -118,7 +124,8 @@ const dummyProperties: Property[] = [
   },
   {
     id: 9,
-    image: "https://via.placeholder.com/300",
+    image:
+      "https://cdn.pixabay.com/photo/2017/08/02/01/01/living-room-2569325_1280.jpg",
     title: "Quaint Studio",
     description: "A quaint studio apartment in the city center",
     contact: "agent9@example.com",
@@ -130,7 +137,8 @@ const dummyProperties: Property[] = [
   },
   {
     id: 10,
-    image: "https://via.placeholder.com/300",
+    image:
+      "https://cdn.pixabay.com/photo/2017/03/28/12/10/chairs-2181947_1280.jpg",
     title: "Mountain Chalet",
     description: "A cozy chalet in the mountains",
     contact: "agent10@example.com",
