@@ -1,28 +1,31 @@
+/* page.module.css */
+
 .container {
   padding-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .propertyCard {
-  width: calc(100% - 40px);
-  margin: 20px;
+  width: calc(100% - 40px); /* Adjusted width with horizontal margin */
+  margin: 20px; /* Added horizontal margin */
   border: 2px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
   display: flex;
+  position: relative; /* Added position relative for absolute positioning of button */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .leftContainer {
   flex: 0 0 300px;
-  padding: 20px;
+  padding: 20px; /* Added internal padding */
 }
 
 .rightContainer {
   flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
+  padding: 20px; /* Added internal padding */
 }
 
 .imageContainer {
@@ -38,7 +41,7 @@
 .title {
   margin-top: 10px;
   text-align: center;
-  color: #000;
+  color: #000; /* Set title color to black */
 }
 
 .hotelInfo {
@@ -46,25 +49,25 @@
   flex-wrap: wrap;
   background-color: #f8f9fa;
   border-top: 1px solid #ccc;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px; /* Adjusted border radius */
+  border-bottom-right-radius: 10px; /* Adjusted border radius */
   padding: 20px;
 }
 
 .infoItem {
-  width: calc(50% - 1px);
+  flex: 1 1 50%; /* Adjusted width for better visibility */
   padding: 10px;
-  border-right: 1px solid #ccc;
-  color: #000;
+  color: #000; /* Set infoItem color to black */
 }
 
-.infoItem:last-child {
-  border-right: none;
+.infoItem:not(:last-child) {
+  border-right: 1px solid #ccc;
 }
 
 .contactButton {
-  align-self: flex-end;
-  margin-top: 10px;
+  position: absolute; /* Positioned absolutely */
+  bottom: 20px; /* Adjusted bottom margin */
+  right: 20px; /* Adjusted right margin */
   background-color: #990000;
   color: white;
   border: none;
@@ -75,4 +78,26 @@
 
 .contactButton:hover {
   background-color: #990000;
+}
+
+@media only screen and (max-width: 768px) {
+  .propertyCard {
+    flex-direction: column;
+    width: calc(100% - 40px);
+    margin: 20px;
+  }
+  
+  .leftContainer,
+  .rightContainer {
+    padding: 20px;
+  }
+  
+  .contactButton {
+    position: relative; /* Change position to relative for default positioning */
+    margin-top: 20px; /* Adjusted margin */
+    margin-left: auto; /* Align button to right */
+    margin-right: 20px; /* Adjusted right margin */
+    bottom: auto; /* Removed bottom positioning */
+    right: auto; /* Removed right positioning */
+  }
 }
