@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./page.module.css";
-import { FaSearch, FaBuilding, FaMapMarkerAlt } from "react-icons/fa"; // Assuming you have react-icons installed
+import { FaSearch, FaBuilding, FaMapMarkerAlt } from "react-icons/fa";
+import Link from "next/link";
 
 const FormComponent: React.FC = () => {
   const cities = [
@@ -40,10 +41,10 @@ const FormComponent: React.FC = () => {
             ))}
           </select>
         </div>
-        <button className={styles.searchButton}>
-          <FaSearch/>
+        <Link className={styles.searchButton} href="/properties">
+          <FaSearch />
           <span>Search</span>
-        </button>
+        </Link>
       </div>
     </div>
   );
