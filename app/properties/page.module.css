@@ -1,16 +1,15 @@
-/* styles/Property.module.css */
-
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding-top: 5rem;
 }
 
 .propertyCard {
   width: 300px;
   margin: 20px;
   padding: 20px;
-  border: 1px solid #000; /* changed border color to black */
+  border: 1px solid #000; 
   border-radius: 5px;
 }
 
@@ -25,15 +24,14 @@
   margin-top: 10px;
 }
 
-/* Changed text color to black */
 .propertyDetails h2,
 .propertyDetails p {
   color: #000;
 }
 
 .contactButton {
-  background-color: #007bff;
-  color: #000; /* changed button text color to black */
+  background-color: #990000;
+  color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -41,5 +39,5 @@
 }
 
 .contactButton:hover {
-  background-color: #0056b3;
+  background-color: #990000;
 }
