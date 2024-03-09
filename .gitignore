@@ -32,3 +32,6 @@ yarn.lock
 
 # Ignore static runtime files
 /static/
+
+#Ignore .next folder
+.next/*
