@@ -1,17 +1,19 @@
-/* styles/Footer.module.css */
+/* Footer.module.css */
 
 .footer {
     background-color: #990000;
     color: white;
     display: flex;
+    flex-wrap: wrap; /* Allow columns to wrap to the next row */
     justify-content: space-around;
-    padding: 20px 0;
+    padding: 20px 20px; /* Adjusted padding */
     width: 100%;
   }
   
   .column {
     flex: 1;
     margin: 0 10px;
+    max-width: 250px; /* Limit the maximum width of each column */
   }
   
   .column h3 {
@@ -20,5 +22,31 @@
   
   .column p {
     margin: 0;
+    padding: 5px 0; /* Added padding to the content */
+  }
+  
+  .socialIcons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .socialIcons svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    color: white; /* You can adjust the color of the icons here */
+  }
+  
+  /* Media query for smaller screens */
+  @media screen and (max-width: 768px) {
+    .footer {
+      padding: 20px 10px; /* Adjusted padding for smaller screens */
+    }
+  
+    .column {
+      flex-basis: 100%; /* Each column takes full width on smaller screens */
+      max-width: 100%; /* Remove maximum width */
+      margin-bottom: 20px; /* Add some space between columns */
+    }
   }
   
