@@ -153,6 +153,10 @@ const dummyProperties: Property[] = [
 const PropertiesPage: React.FC = () => {
   const [properties] = useState<Property[]>(dummyProperties);
 
+  const handleContactAgent = (phoneNumber: string) => {
+    window.location.href = `tel:+91${phoneNumber}`;
+  };
+
   return (
     <div className={styles.container}>
       {properties.map((property) => (
@@ -186,7 +190,12 @@ const PropertiesPage: React.FC = () => {
               </div>{" "}
               {/* Changed to INR */}
             </div>
-            <button className={styles.contactButton}>Contact Agent</button>
+            <button
+              className={styles.contactButton}
+              onClick={() => handleContactAgent("9604491933")}
+            >
+              Contact Agent
+            </button>
           </div>
         </div>
       ))}
