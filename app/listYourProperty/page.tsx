@@ -355,13 +355,20 @@ const Listing: React.FC = () => {
               <label className={styles.label}>Rent Type:</label>
               <div>
                 <input
-                  type="checkbox"
+                  type="radio"
                   name="rentType"
                   value="Monthly"
-                  checked={formData.rentType.includes("Monthly")}
+                  checked={formData.rentType === "Monthly"}
                   onChange={handleChange}
                 />
                 <label style={{ color: "black" }}>Monthly</label>
+                <input
+                  type="radio"
+                  name="rentType"
+                  value="Daily"
+                  checked={formData.rentType === "Daily"}
+                  onChange={handleChange}
+                />
                 <label style={{ color: "black" }}>Daily</label>
               </div>
             </div>
@@ -387,7 +394,61 @@ const Listing: React.FC = () => {
                   checked={formData.sharingType.includes("1")}
                   onChange={handleChange}
                 />
-                <label style={{ color: "black" }}>1</label>
+                <label style={{ color: "black", marginRight: "10px" }}>1</label>
+
+                <input
+                  type="checkbox"
+                  name="sharingType"
+                  value="2"
+                  checked={formData.sharingType.includes("2")}
+                  onChange={handleChange}
+                />
+                <label style={{ color: "black", marginRight: "10px" }}>2</label>
+
+                <input
+                  type="checkbox"
+                  name="sharingType"
+                  value="3"
+                  checked={formData.sharingType.includes("3")}
+                  onChange={handleChange}
+                />
+                <label style={{ color: "black", marginRight: "10px" }}>3</label>
+
+                <input
+                  type="checkbox"
+                  name="sharingType"
+                  value="4"
+                  checked={formData.sharingType.includes("4")}
+                  onChange={handleChange}
+                />
+                <label style={{ color: "black", marginRight: "10px" }}>4</label>
+
+                <input
+                  type="checkbox"
+                  name="sharingType"
+                  value="5"
+                  checked={formData.sharingType.includes("5")}
+                  onChange={handleChange}
+                />
+                <label style={{ color: "black", marginRight: "10px" }}>5</label>
+
+                <input
+                  type="checkbox"
+                  name="sharingType"
+                  value="6"
+                  checked={formData.sharingType.includes("6")}
+                  onChange={handleChange}
+                />
+                <label style={{ color: "black", marginRight: "10px" }}>6</label>
+
+                <input
+                  type="checkbox"
+                  name="sharingType"
+                  value="7"
+                  checked={formData.sharingType.includes("7")}
+                  onChange={handleChange}
+                />
+                <label style={{ color: "black", marginRight: "10px" }}>7</label>
               </div>
 
               <label className={styles.label}>Pincode:</label>
