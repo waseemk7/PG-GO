@@ -17,7 +17,7 @@ interface Property {
   tenantType: string;
   pointOfContact: string;
   otherAmenities: string[];
-  rentType: string[];
+  rentType: string;
   roomType: string;
   sharingType: string[];
   pincode: string;
@@ -113,7 +113,7 @@ const Listing: React.FC = () => {
       tenantType: "",
       pointOfContact: "",
       otherAmenities: [],
-      rentType: [],
+      rentType: "",
       roomType: "",
       sharingType: [],
       pincode: "",
