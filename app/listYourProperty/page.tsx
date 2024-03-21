@@ -23,6 +23,7 @@ interface Property {
   pincode: string;
   deposit: string;
   wifi: string;
+  [key: string]: string | string[] | File[];
 }
 
 const Listing: React.FC = () => {
