@@ -70,6 +70,21 @@ const Listing: React.FC = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value, checked } = e.target;
+    if (checked) {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        [name]: [...prevFormData[name], value],
+      }));
+    } else {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        [name]: prevFormData[name].filter((item: string) => item !== value),
+      }));
+    }
+  };
+
   const handlePictureChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (files) {
@@ -217,7 +232,7 @@ const Listing: React.FC = () => {
                   checked={formData.tenantType === "Girls"}
                   onChange={handleChange}
                 />
-                <label>Girls</label>
+                <label style={{ color: "black" }}>Girls</label>
                 <input
                   type="radio"
                   name="tenantType"
@@ -225,7 +240,7 @@ const Listing: React.FC = () => {
                   checked={formData.tenantType === "Boys"}
                   onChange={handleChange}
                 />
-                <label>Boys</label>
+                <label style={{ color: "black" }}>Boys</label>
                 <input
                   type="radio"
                   name="tenantType"
@@ -233,7 +248,7 @@ const Listing: React.FC = () => {
                   checked={formData.tenantType === "Girls/Boys"}
                   onChange={handleChange}
                 />
-                <label>Girls/Boys</label>
+                <label style={{ color: "black" }}>Girls/Boys</label>
               </div>
 
               <label className={styles.label}>Point of Contact:</label>
@@ -252,10 +267,89 @@ const Listing: React.FC = () => {
                   name="otherAmenities"
                   value="Water Purify"
                   checked={formData.otherAmenities.includes("Water Purify")}
-                  onChange={handleChange}
+                  onChange={handleCheckboxChange}
                 />
-                <label>Water Purify</label>
-                {/* Add other amenity checkboxes */}
+                <label style={{ color: "black" }}>Water Purify</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="otherAmenities"
+                  value="Hot Water"
+                  checked={formData.otherAmenities.includes("Hot Water")}
+                  onChange={handleCheckboxChange}
+                />
+                <label style={{ color: "black" }}>Hot Water</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="otherAmenities"
+                  value="Dish-TV"
+                  checked={formData.otherAmenities.includes("Dish-TV")}
+                  onChange={handleCheckboxChange}
+                />
+                <label style={{ color: "black" }}>Dish-TV</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="otherAmenities"
+                  value="Fridge"
+                  checked={formData.otherAmenities.includes("Fridge")}
+                  onChange={handleCheckboxChange}
+                />
+                <label style={{ color: "black" }}>Fridge</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="otherAmenities"
+                  value="TV"
+                  checked={formData.otherAmenities.includes("TV")}
+                  onChange={handleCheckboxChange}
+                />
+                <label style={{ color: "black" }}>TV</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="otherAmenities"
+                  value="Western Toilet"
+                  checked={formData.otherAmenities.includes("Western Toilet")}
+                  onChange={handleCheckboxChange}
+                />
+                <label style={{ color: "black" }}>Western Toilet</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="otherAmenities"
+                  value="Gas Stove"
+                  checked={formData.otherAmenities.includes("Gas Stove")}
+                  onChange={handleCheckboxChange}
+                />
+                <label style={{ color: "black" }}>Gas Stove</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="otherAmenities"
+                  value="Sofa"
+                  checked={formData.otherAmenities.includes("Sofa")}
+                  onChange={handleCheckboxChange}
+                />
+                <label style={{ color: "black" }}>Sofa</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="otherAmenities"
+                  value="Washing Machine"
+                  checked={formData.otherAmenities.includes("Washing Machine")}
+                  onChange={handleCheckboxChange}
+                />
+                <label style={{ color: "black" }}>Washing Machine</label>
               </div>
 
               <label className={styles.label}>Rent Type:</label>
@@ -267,8 +361,8 @@ const Listing: React.FC = () => {
                   checked={formData.rentType.includes("Monthly")}
                   onChange={handleChange}
                 />
-                <label>Monthly</label>
-                {/* Add other rent type checkboxes */}
+                <label style={{ color: "black" }}>Monthly</label>
+                <label style={{ color: "black" }}>Daily</label>
               </div>
             </div>
             <div className={styles.column}>
@@ -293,8 +387,7 @@ const Listing: React.FC = () => {
                   checked={formData.sharingType.includes("1")}
                   onChange={handleChange}
                 />
-                <label>1</label>
-                {/* Add other sharing type checkboxes */}
+                <label style={{ color: "black" }}>1</label>
               </div>
 
               <label className={styles.label}>Pincode:</label>
