@@ -48,6 +48,17 @@ const Listing: React.FC = () => {
     wifi: "",
   });
 
+  const cities = [
+    "Pune",
+    "Mumbai",
+    "Delhi",
+    "Bangalore",
+    "Kolkata",
+    "Chennai",
+    "Hyderabad",
+    "Ahmedabad",
+  ];
+
   const [properties, setProperties] = useState<Property[]>([]);
 
   const handleChange = (
@@ -156,7 +167,11 @@ const Listing: React.FC = () => {
                 className={styles.inputField}
               >
                 <option value="">Select City</option>
-                {/* Add options for cities */}
+                {cities.map((city) => (
+                  <option key={city} value={city}>
+                    {city}
+                  </option>
+                ))}
               </select>
             </div>
             <div className={styles.column}>
