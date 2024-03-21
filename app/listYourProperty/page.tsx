@@ -69,21 +69,23 @@ const Listing: React.FC = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, checked } = e.target;
-    if (checked) {
-      setFormData((prevFormData) => ({
-        ...prevFormData,
-        [name]: [...prevFormData[name], value],
-      }));
-    } else {
-      setFormData((prevFormData) => ({
-        ...prevFormData,
-        [name]: prevFormData[name].filter((item: string) => item !== value),
-      }));
-    }
+    setFormData((prevFormData) => {
+      if (checked) {
+        return {
+          ...prevFormData,
+          [name]: [...(prevFormData[name] as string[]), value], // Type assertion
+        };
+      } else {
+        return {
+          ...prevFormData,
+          [name]: (prevFormData[name] as string[]).filter((item) => item !== value), // Type assertion
+        };
+      }
+    });
   };
+  
 
   const handlePictureChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
