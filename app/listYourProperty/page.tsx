@@ -41,7 +41,7 @@ const Listing: React.FC = () => {
     tenantType: "",
     pointOfContact: "",
     otherAmenities: [],
-    rentType: [],
+    rentType: "",
     roomType: "",
     sharingType: [],
     pincode: "",
