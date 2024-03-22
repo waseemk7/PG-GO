@@ -3,7 +3,6 @@
 import { useState } from "react";
 import styles from "./page.module.css";
 
-// Import icons as needed
 import { FaWifi, FaBath, FaCouch, FaBed } from "react-icons/fa";
 
 type Property = {

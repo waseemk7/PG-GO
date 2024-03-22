@@ -1,5 +1,3 @@
-/* page.module.css */
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -30,7 +28,7 @@
 }
 
 .navbar li {
-  margin-right: 1rem; /* Adjust spacing between list items */
+  margin-right: 1rem; 
 }
 
 .navbar li:last-child {
@@ -40,10 +38,10 @@
 .navbar a {
   text-decoration: none;
   color: #fff;
-  font-size: 1rem; /* Adjust font size as needed */
+  font-size: 1rem; 
   transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-  color: #ccc; /* Change color on hover */
+  color: #ccc; 
 }

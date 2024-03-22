@@ -1,5 +1,4 @@
 "use client";
-// listing.tsx
 import React, { useState } from "react";
 import styles from "./page.module.css";
 
@@ -81,12 +80,13 @@ const Listing: React.FC = () => {
       } else {
         return {
           ...prevFormData,
-          [name]: (prevFormData[name] as string[]).filter((item) => item !== value), // Type assertion
+          [name]: (prevFormData[name] as string[]).filter(
+            (item) => item !== value
+          ), // Type assertion
         };
       }
     });
   };
-  
 
   const handlePictureChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
@@ -129,7 +129,6 @@ const Listing: React.FC = () => {
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.columns}>
             <div className={styles.column}>
-              {/* First Column */}
               <label className={styles.label}>Property Name:</label>
               <input
                 type="text"
@@ -193,7 +192,6 @@ const Listing: React.FC = () => {
               </select>
             </div>
             <div className={styles.column}>
-              {/* Second Column */}
               <label className={styles.label}>Address Line 1:</label>
               <input
                 type="text"
@@ -376,7 +374,6 @@ const Listing: React.FC = () => {
               </div>
             </div>
             <div className={styles.column}>
-              {/* Third Column */}
               <label className={styles.label}>Room Type:</label>
               <select
                 name="roomType"
