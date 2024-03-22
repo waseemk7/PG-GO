@@ -115,3 +115,18 @@
   border-radius: 5px;
   margin-bottom: 20px;
 }
+
+.radioContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.radioContainer input[type="radio"] {
+  margin-right: 5px;
+}
+
+.radioContainer label {
+  margin-right: 10px;
+  color: black;
+}

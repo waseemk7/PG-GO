@@ -224,31 +224,33 @@ const Listing: React.FC = () => {
               </select>
 
               <label className={styles.label}>Tenant Type:</label>
-              <div>
-                <input
-                  type="radio"
-                  name="tenantType"
-                  value="Girls"
-                  checked={formData.tenantType === "Girls"}
-                  onChange={handleChange}
-                />
-                <label style={{ color: "black" }}>Girls</label>
-                <input
-                  type="radio"
-                  name="tenantType"
-                  value="Boys"
-                  checked={formData.tenantType === "Boys"}
-                  onChange={handleChange}
-                />
-                <label style={{ color: "black" }}>Boys</label>
-                <input
-                  type="radio"
-                  name="tenantType"
-                  value="Girls/Boys"
-                  checked={formData.tenantType === "Girls/Boys"}
-                  onChange={handleChange}
-                />
-                <label style={{ color: "black" }}>Girls/Boys</label>
+              <div className={styles.radioContainer}>
+                <div>
+                  <input
+                    type="radio"
+                    name="tenantType"
+                    value="Girls"
+                    checked={formData.tenantType === "Girls"}
+                    onChange={handleChange}
+                  />
+                  <label style={{ color: "black" }}>Girls</label>
+                  <input
+                    type="radio"
+                    name="tenantType"
+                    value="Boys"
+                    checked={formData.tenantType === "Boys"}
+                    onChange={handleChange}
+                  />
+                  <label style={{ color: "black" }}>Boys</label>
+                  <input
+                    type="radio"
+                    name="tenantType"
+                    value="Girls/Boys"
+                    checked={formData.tenantType === "Girls/Boys"}
+                    onChange={handleChange}
+                  />
+                  <label style={{ color: "black" }}>Girls/Boys</label>
+                </div>
               </div>
 
               <label className={styles.label}>Point of Contact:</label>
@@ -261,23 +263,25 @@ const Listing: React.FC = () => {
               />
 
               <label className={styles.label}>Rent Type:</label>
-              <div>
-                <input
-                  type="radio"
-                  name="rentType"
-                  value="Monthly"
-                  checked={formData.rentType === "Monthly"}
-                  onChange={handleChange}
-                />
-                <label style={{ color: "black" }}>Monthly</label>
-                <input
-                  type="radio"
-                  name="rentType"
-                  value="Daily"
-                  checked={formData.rentType === "Daily"}
-                  onChange={handleChange}
-                />
-                <label style={{ color: "black" }}>Daily</label>
+              <div className={styles.radioContainer}>
+                <div>
+                  <input
+                    type="radio"
+                    name="rentType"
+                    value="Monthly"
+                    checked={formData.rentType === "Monthly"}
+                    onChange={handleChange}
+                  />
+                  <label style={{ color: "black" }}>Monthly</label>
+                  <input
+                    type="radio"
+                    name="rentType"
+                    value="Daily"
+                    checked={formData.rentType === "Daily"}
+                    onChange={handleChange}
+                  />
+                  <label style={{ color: "black" }}>Daily</label>
+                </div>
               </div>
             </div>
             <div className={styles.column}>
