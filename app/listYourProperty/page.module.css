@@ -5,6 +5,7 @@
   align-items: center;
   min-height: 100vh;
   flex-direction: column;
+  margin-top: 65px;
 }
 
 .container {
@@ -28,7 +29,14 @@
 }
 
 .column {
-  width: calc(33.33% - 10px); /* Each column takes 1/3 of the container width */
+  flex: 1;
+  width: calc(33.33% - 20px); /* Each column takes 1/3 of the container width with side margins */
+  margin-right: 10px; /* Side margin between columns */
+  margin-bottom: 20px; /* Add margin bottom to separate rows */
+}
+
+.column:last-child {
+  margin-right: 0; /* Remove right margin for the last column */
 }
 
 .label {
@@ -72,4 +80,9 @@
   max-width: 100%;
   height: auto;
   margin-top: 10px;
+}
+
+.checkboxContainer {
+  display: flex;
+  justify-content: space-between;
 }
