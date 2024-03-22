@@ -260,108 +260,6 @@ const Listing: React.FC = () => {
                 className={styles.inputField}
               />
 
-              <label className={styles.label}>Other Amenities:</label>
-              <div className={styles.checkboxContainer}>
-                <div className={styles.column}>
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="otherAmenities"
-                      value="Water Purify"
-                      checked={formData.otherAmenities.includes("Water Purify")}
-                      onChange={handleCheckboxChange}
-                    />
-                    <label style={{ color: "black" }}>Water Purify</label>
-                  </div>
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="otherAmenities"
-                      value="Hot Water"
-                      checked={formData.otherAmenities.includes("Hot Water")}
-                      onChange={handleCheckboxChange}
-                    />
-                    <label style={{ color: "black" }}>Hot Water</label>
-                  </div>
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="otherAmenities"
-                      value="Dish-TV"
-                      checked={formData.otherAmenities.includes("Dish-TV")}
-                      onChange={handleCheckboxChange}
-                    />
-                    <label style={{ color: "black" }}>Dish-TV</label>
-                  </div>
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="otherAmenities"
-                      value="Fridge"
-                      checked={formData.otherAmenities.includes("Fridge")}
-                      onChange={handleCheckboxChange}
-                    />
-                    <label style={{ color: "black" }}>Fridge</label>
-                  </div>
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="otherAmenities"
-                      value="TV"
-                      checked={formData.otherAmenities.includes("TV")}
-                      onChange={handleCheckboxChange}
-                    />
-                    <label style={{ color: "black" }}>TV</label>
-                  </div>
-                </div>
-                <div className={styles.column}>
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="otherAmenities"
-                      value="Western Toilet"
-                      checked={formData.otherAmenities.includes(
-                        "Western Toilet"
-                      )}
-                      onChange={handleCheckboxChange}
-                    />
-                    <label style={{ color: "black" }}>Western Toilet</label>
-                  </div>
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="otherAmenities"
-                      value="Gas Stove"
-                      checked={formData.otherAmenities.includes("Gas Stove")}
-                      onChange={handleCheckboxChange}
-                    />
-                    <label style={{ color: "black" }}>Gas Stove</label>
-                  </div>
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="otherAmenities"
-                      value="Sofa"
-                      checked={formData.otherAmenities.includes("Sofa")}
-                      onChange={handleCheckboxChange}
-                    />
-                    <label style={{ color: "black" }}>Sofa</label>
-                  </div>
-                  <div>
-                    <input
-                      type="checkbox"
-                      name="otherAmenities"
-                      value="Washing Machine"
-                      checked={formData.otherAmenities.includes(
-                        "Washing Machine"
-                      )}
-                      onChange={handleCheckboxChange}
-                    />
-                    <label style={{ color: "black" }}>Washing Machine</label>
-                  </div>
-                </div>
-              </div>
-
               <label className={styles.label}>Rent Type:</label>
               <div>
                 <input
@@ -505,6 +403,102 @@ const Listing: React.FC = () => {
                 onChange={handlePictureChange}
                 className={styles.inputField}
               />
+            </div>
+          </div>
+          <div className={styles.otherAmenitiesContainer}>
+            <label className={styles.label}>Other Amenities:</label>
+            <div className={styles.checkboxContainer}>
+              <div>
+                <input
+                  type="checkbox"
+                  name="otherAmenities"
+                  value="Water Purify"
+                  checked={formData.otherAmenities.includes("Water Purify")}
+                  onChange={handleCheckboxChange}
+                />
+                <label style={{ color: "black" }}>Water Purify</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="otherAmenities"
+                  value="Hot Water"
+                  checked={formData.otherAmenities.includes("Hot Water")}
+                  onChange={handleCheckboxChange}
+                />
+                <label style={{ color: "black" }}>Hot Water</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="otherAmenities"
+                  value="Dish-TV"
+                  checked={formData.otherAmenities.includes("Dish-TV")}
+                  onChange={handleCheckboxChange}
+                />
+                <label style={{ color: "black" }}>Dish-TV</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="otherAmenities"
+                  value="Fridge"
+                  checked={formData.otherAmenities.includes("Fridge")}
+                  onChange={handleCheckboxChange}
+                />
+                <label style={{ color: "black" }}>Fridge</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="otherAmenities"
+                  value="TV"
+                  checked={formData.otherAmenities.includes("TV")}
+                  onChange={handleCheckboxChange}
+                />
+                <label style={{ color: "black" }}>TV</label>
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  name="otherAmenities"
+                  value="Western Toilet"
+                  checked={formData.otherAmenities.includes("Western Toilet")}
+                  onChange={handleCheckboxChange}
+                />
+                <label style={{ color: "black" }}>Western Toilet</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="otherAmenities"
+                  value="Gas Stove"
+                  checked={formData.otherAmenities.includes("Gas Stove")}
+                  onChange={handleCheckboxChange}
+                />
+                <label style={{ color: "black" }}>Gas Stove</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="otherAmenities"
+                  value="Sofa"
+                  checked={formData.otherAmenities.includes("Sofa")}
+                  onChange={handleCheckboxChange}
+                />
+                <label style={{ color: "black" }}>Sofa</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="otherAmenities"
+                  value="Washing Machine"
+                  checked={formData.otherAmenities.includes("Washing Machine")}
+                  onChange={handleCheckboxChange}
+                />
+                <label style={{ color: "black" }}>Washing Machine</label>
+              </div>
             </div>
           </div>
           <button type="submit" className={styles.button}>

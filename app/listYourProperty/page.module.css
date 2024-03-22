@@ -5,7 +5,7 @@
   align-items: center;
   min-height: 100vh;
   flex-direction: column;
-  margin-top: 65px;
+  margin-top: 60px;
 }
 
 .container {
@@ -21,6 +21,7 @@
 .form {
   width: 100%;
   position: relative;
+  padding-bottom: 60px;
 }
 
 .columns {
@@ -106,4 +107,11 @@
 .checkboxContainer {
   display: flex;
   justify-content: space-between;
+}
+
+.otherAmenitiesContainer {
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
