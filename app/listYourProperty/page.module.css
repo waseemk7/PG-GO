@@ -20,6 +20,7 @@
 
 .form {
   width: 100%;
+  position: relative;
 }
 
 .columns {
@@ -58,10 +59,28 @@
 .button {
   background-color: #990000;
   color: white;
-  padding: 10px 20px;
+  padding: 15px 40px;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  width: calc(100% - 40px);
+  max-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .button {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin: 20px auto 0;
+    width: calc(100% - 40px);
+    max-width: 300px;
+  }
 }
 
 .button:hover {
