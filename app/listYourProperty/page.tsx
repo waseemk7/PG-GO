@@ -388,68 +388,20 @@ const Listing: React.FC = () => {
               )}
               <label className={styles.label}>Sharing Type:</label>
               <div>
-                <input
-                  type="checkbox"
-                  name="sharingType"
-                  value="1"
-                  checked={formData.sharingType.includes("1")}
-                  onChange={handleChange}
-                />
-                <label style={{ color: "black", marginRight: "10px" }}>1</label>
-
-                <input
-                  type="checkbox"
-                  name="sharingType"
-                  value="2"
-                  checked={formData.sharingType.includes("2")}
-                  onChange={handleChange}
-                />
-                <label style={{ color: "black", marginRight: "10px" }}>2</label>
-
-                <input
-                  type="checkbox"
-                  name="sharingType"
-                  value="3"
-                  checked={formData.sharingType.includes("3")}
-                  onChange={handleChange}
-                />
-                <label style={{ color: "black", marginRight: "10px" }}>3</label>
-
-                <input
-                  type="checkbox"
-                  name="sharingType"
-                  value="4"
-                  checked={formData.sharingType.includes("4")}
-                  onChange={handleChange}
-                />
-                <label style={{ color: "black", marginRight: "10px" }}>4</label>
-
-                <input
-                  type="checkbox"
-                  name="sharingType"
-                  value="5"
-                  checked={formData.sharingType.includes("5")}
-                  onChange={handleChange}
-                />
-                <label style={{ color: "black", marginRight: "10px" }}>5</label>
-
-                <input
-                  type="checkbox"
-                  name="sharingType"
-                  value="6"
-                  checked={formData.sharingType.includes("6")}
-                  onChange={handleChange}
-                />
-                <label style={{ color: "black", marginRight: "10px" }}>6</label>
-
-                <input
-                  type="checkbox"
-                  name="sharingType"
-                  value="7"
-                  checked={formData.sharingType.includes("7")}
-                  onChange={handleChange}
-                />
-                <label style={{ color: "black", marginRight: "10px" }}>7</label>
+                {[1, 2, 3, 4, 5, 6, 7].map((value) => (
+                  <React.Fragment key={value}>
+                    <input
+                      type="checkbox"
+                      name="sharingType"
+                      value={value}
+                      checked={formData.sharingType.includes(value.toString())}
+                      onChange={handleChange}
+                    />
+                    <label style={{ color: "black", marginRight: "10px" }}>
+                      {value}
+                    </label>
+                  </React.Fragment>
+                ))}
               </div>
 
               <label className={styles.label}>Pincode:</label>
