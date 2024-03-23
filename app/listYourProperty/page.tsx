@@ -60,6 +60,8 @@ const Listing: React.FC = () => {
     "Ahmedabad",
   ];
 
+  const [errors, setErrors] = useState<Partial<Property>>({});
+
   const [properties, setProperties] = useState<Property[]>([]);
 
   const handleChange = (
@@ -99,7 +101,64 @@ const Listing: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const formErrors: Partial<Property> = {};
+    if (!formData.propertyName) {
+      formErrors.propertyName = "Property Name is required";
+    }
+    if (!formData.description) {
+      formErrors.description = "Description is required";
+    }
+    if (!formData.location) {
+      formErrors.location = "Location is required";
+    }
+    if (!formData.rent) {
+      formErrors.rent = "Rent is required";
+    }
+    if (!formData.propertyType) {
+      formErrors.propertyType = "Propert type is required";
+    }
+    if (!formData.city) {
+      formErrors.city = "City is required";
+    }
+    if (!formData.addressLine1) {
+      formErrors.addressLine1 = "Address line is required";
+    }
+    if (!formData.landmark) {
+      formErrors.landmark = "Landmark is required";
+    }
+    if (!formData.foodIncluded) {
+      formErrors.foodIncluded = "Food included is required";
+    }
+    if (!formData.tenantType) {
+      formErrors.tenantType = "Tenant type is required";
+    }
+    if (!formData.pointOfContact) {
+      formErrors.pointOfContact = "Point of contact is required";
+    }
+    if (!formData.rentType) {
+      formErrors.rentType = "Rent type is required";
+    }
+    if (!formData.roomType) {
+      formErrors.roomType = "Room type is required";
+    }
+    if (!formData.pincode) {
+      formErrors.pincode = "Pincode is required";
+    }
+    if (!formData.deposit) {
+      formErrors.deposit = "Deposit is required";
+    }
+    if (!formData.wifi) {
+      formErrors.wifi = "Wifi is required";
+    }
+
+    if (Object.keys(formErrors).length > 0) {
+      setErrors(formErrors);
+      return;
+    }
+
     setProperties([...properties, formData]);
+
     setFormData({
       propertyName: "",
       description: "",
@@ -121,6 +180,7 @@ const Listing: React.FC = () => {
       deposit: "",
       wifi: "",
     });
+    setErrors({});
   };
 
   return (
@@ -137,6 +197,9 @@ const Listing: React.FC = () => {
                 onChange={handleChange}
                 className={styles.inputField}
               />
+              {errors.propertyName && (
+                <span className={styles.error}>{errors.propertyName}</span>
+              )}
 
               <label className={styles.label}>Description:</label>
               <textarea
@@ -145,6 +208,9 @@ const Listing: React.FC = () => {
                 onChange={handleChange}
                 className={styles.inputField}
               />
+              {errors.description && (
+                <span className={styles.error}>{errors.description}</span>
+              )}
 
               <label className={styles.label}>Location:</label>
               <input
@@ -154,6 +220,9 @@ const Listing: React.FC = () => {
                 onChange={handleChange}
                 className={styles.inputField}
               />
+              {errors.location && (
+                <span className={styles.error}>{errors.location}</span>
+              )}
 
               <label className={styles.label}>Rent:</label>
               <input
@@ -163,6 +232,9 @@ const Listing: React.FC = () => {
                 onChange={handleChange}
                 className={styles.inputField}
               />
+              {errors.rent && (
+                <span className={styles.error}>{errors.rent}</span>
+              )}
 
               <label className={styles.label}>Property Type:</label>
               <select
@@ -175,6 +247,9 @@ const Listing: React.FC = () => {
                 <option value="Paying Guest">Paying Guest</option>
                 <option value="Hostels">Hostels</option>
               </select>
+              {errors.propertyType && (
+                <span className={styles.error}>{errors.propertyType}</span>
+              )}
 
               <label className={styles.label}>City:</label>
               <select
@@ -190,6 +265,9 @@ const Listing: React.FC = () => {
                   </option>
                 ))}
               </select>
+              {errors.city && (
+                <span className={styles.error}>{errors.city}</span>
+              )}
             </div>
             <div className={styles.column}>
               <label className={styles.label}>Address Line 1:</label>
@@ -200,6 +278,9 @@ const Listing: React.FC = () => {
                 onChange={handleChange}
                 className={styles.inputField}
               />
+              {errors.addressLine1 && (
+                <span className={styles.error}>{errors.addressLine1}</span>
+              )}
 
               <label className={styles.label}>Landmark:</label>
               <input
@@ -209,6 +290,9 @@ const Listing: React.FC = () => {
                 onChange={handleChange}
                 className={styles.inputField}
               />
+              {errors.landmark && (
+                <span className={styles.error}>{errors.landmark}</span>
+              )}
 
               <label className={styles.label}>Food Included:</label>
               <select
@@ -223,6 +307,9 @@ const Listing: React.FC = () => {
                 <option value="Pure Veg">Pure Veg</option>
                 <option value="NA">NA</option>
               </select>
+              {errors.foodIncluded && (
+                <span className={styles.error}>{errors.foodIncluded}</span>
+              )}
 
               <label className={styles.label}>Tenant Type:</label>
               <div className={styles.radioContainer}>
@@ -247,6 +334,9 @@ const Listing: React.FC = () => {
                   />
                 </div>
               </div>
+              {errors.tenantType && (
+                <span className={styles.error}>{errors.tenantType}</span>
+              )}
 
               <label className={styles.label}>Point of Contact:</label>
               <input
@@ -256,6 +346,9 @@ const Listing: React.FC = () => {
                 onChange={handleChange}
                 className={styles.inputField}
               />
+              {errors.pointOfContact && (
+                <span className={styles.error}>{errors.pointOfContact}</span>
+              )}
 
               <label className={styles.label}>Rent Type:</label>
               <div className={styles.radioContainer}>
@@ -274,6 +367,9 @@ const Listing: React.FC = () => {
                   />
                 </div>
               </div>
+              {errors.rentType && (
+                <span className={styles.error}>{errors.rentType}</span>
+              )}
             </div>
             <div className={styles.column}>
               <label className={styles.label}>Room Type:</label>
@@ -287,6 +383,9 @@ const Listing: React.FC = () => {
                 <option value="AC">AC</option>
                 <option value="Non AC">Non AC</option>
               </select>
+              {errors.roomType && (
+                <span className={styles.error}>{errors.roomType}</span>
+              )}
               <label className={styles.label}>Sharing Type:</label>
               <div>
                 <input
@@ -361,6 +460,9 @@ const Listing: React.FC = () => {
                 onChange={handleChange}
                 className={styles.inputField}
               />
+              {errors.pincode && (
+                <span className={styles.error}>{errors.pincode}</span>
+              )}
 
               <label className={styles.label}>Deposit:</label>
               <select
@@ -374,6 +476,9 @@ const Listing: React.FC = () => {
                 <option value="2 Months">2 Months</option>
                 <option value="3 Months">3 Months</option>
               </select>
+              {errors.deposit && (
+                <span className={styles.error}>{errors.deposit}</span>
+              )}
 
               <label className={styles.label}>Wifi:</label>
               <select
@@ -386,6 +491,9 @@ const Listing: React.FC = () => {
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
               </select>
+              {errors.wifi && (
+                <span className={styles.error}>{errors.wifi}</span>
+              )}
 
               <label className={styles.label}>
                 Upload Pictures (at least 5):
