@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import RadioButton from "@/components/radioButton/page";
 import styles from "./page.module.css";
 
 interface Property {
@@ -226,30 +227,24 @@ const Listing: React.FC = () => {
               <label className={styles.label}>Tenant Type:</label>
               <div className={styles.radioContainer}>
                 <div>
-                  <input
-                    type="radio"
+                  <RadioButton
                     name="tenantType"
                     value="Girls"
                     checked={formData.tenantType === "Girls"}
                     onChange={handleChange}
                   />
-                  <label style={{ color: "black" }}>Girls</label>
-                  <input
-                    type="radio"
+                  <RadioButton
                     name="tenantType"
                     value="Boys"
                     checked={formData.tenantType === "Boys"}
                     onChange={handleChange}
                   />
-                  <label style={{ color: "black" }}>Boys</label>
-                  <input
-                    type="radio"
+                  <RadioButton
                     name="tenantType"
                     value="Girls/Boys"
                     checked={formData.tenantType === "Girls/Boys"}
                     onChange={handleChange}
                   />
-                  <label style={{ color: "black" }}>Girls/Boys</label>
                 </div>
               </div>
 
@@ -265,22 +260,18 @@ const Listing: React.FC = () => {
               <label className={styles.label}>Rent Type:</label>
               <div className={styles.radioContainer}>
                 <div>
-                  <input
-                    type="radio"
+                  <RadioButton
                     name="rentType"
                     value="Monthly"
-                    checked={formData.rentType === "Monthly"}
+                    checked={formData.rentType === "Monthly/Boys"}
                     onChange={handleChange}
                   />
-                  <label style={{ color: "black" }}>Monthly</label>
-                  <input
-                    type="radio"
+                  <RadioButton
                     name="rentType"
                     value="Daily"
                     checked={formData.rentType === "Daily"}
                     onChange={handleChange}
                   />
-                  <label style={{ color: "black" }}>Daily</label>
                 </div>
               </div>
             </div>
