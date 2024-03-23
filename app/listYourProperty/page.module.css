@@ -73,17 +73,6 @@
   max-width: 300px;
 }
 
-@media (max-width: 768px) {
-  .button {
-    position: relative;
-    bottom: auto;
-    right: auto;
-    margin: 20px auto 0;
-    width: calc(100% - 40px);
-    max-width: 300px;
-  }
-}
-
 .button:hover {
   background-color: #990000;
 }
@@ -129,4 +118,25 @@
 .radioContainer label {
   margin-right: 10px;
   color: black;
+}
+
+@media (max-width: 768px) {
+  .checkboxContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .checkboxContainer > div {
+    flex-basis: 50%;
+    width: 50%;
+    margin-bottom: 10px;
+  }
+  .button {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin: 20px auto 0;
+    width: calc(100% - 40px);
+    max-width: 300px;
+  }
 }
