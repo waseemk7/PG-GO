@@ -121,6 +121,24 @@
 }
 
 @media (max-width: 768px) {
+  .columns {
+    flex-wrap: wrap;
+  }
+
+  .column {
+    flex: 1 1 100%; 
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .column:nth-child(odd) {
+    margin-right: 0;
+  }
+
+  .fullWidth {
+    width: 100%;
+    margin-right: 0;
+  }
   .checkboxContainer {
     flex-direction: row;
     flex-wrap: wrap;
