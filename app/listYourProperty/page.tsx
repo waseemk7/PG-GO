@@ -76,14 +76,14 @@ const Listing: React.FC = () => {
       if (checked) {
         return {
           ...prevFormData,
-          [name]: [...(prevFormData[name] as string[]), value], // Type assertion
+          [name]: [...(prevFormData[name] as string[]), value],
         };
       } else {
         return {
           ...prevFormData,
           [name]: (prevFormData[name] as string[]).filter(
             (item) => item !== value
-          ), // Type assertion
+          ),
         };
       }
     });
