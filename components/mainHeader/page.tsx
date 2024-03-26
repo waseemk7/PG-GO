@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { FaPhone } from "react-icons/fa";
 import styles from "./page.module.css";
 
 interface HeaderProps {}
@@ -24,6 +25,12 @@ const MainHeader: React.FC<HeaderProps> = () => {
 
       <nav className={styles.navbar}>
         <ul>
+          <li>
+            <a href="tel:+9604491933">
+              <span>Call Us </span>
+              <FaPhone size={14} />
+            </a>
+          </li>
           <li>
             <Link href="/listYourProperty">List your property</Link>
           </li>
